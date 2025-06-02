@@ -1,0 +1,172 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap'); /* Added Roboto Mono for code */
+
+:root {
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-family-mono: 'Roboto Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; /* Monospace font for code */
+
+  /* Core Palette */
+  --primary-brand-deep: #0E1330;    /* Chatbot BG / Main BG */
+  --primary-brand-medium: #2B2C5D;  /* Sidebar, some UI elements */
+  --primary-brand-accent: #1690BF;  /* Icons, Buttons, Active states, Links */
+  --primary-brand-accent-darker: #127BA0; /* For hover states on accent elements */
+
+  /* Neutral Shades */
+  --text-light: #F9FAFB;            /* Main text on dark backgrounds */
+  --text-light-emphasis: #FFFFFF;   /* For bold/italic text to make it pop slightly more */
+  --text-medium: #D1D5DB;           /* Secondary text, placeholders */
+  --text-dark: #9CA3AF;             /* Tertiary text, subtle UI elements */
+  
+  --bg-main: var(--primary-brand-deep);
+  --bg-sidebar: var(--primary-brand-medium);
+  --bg-input-initial: #1f2044;      /* For centered input bar background */
+  --bg-input-bottom: #1A1B3A;       /* Optional darker strip for bottom input container */
+  
+  --bg-chat-user: var(--primary-brand-accent); /* User message bubble */
+  --bg-chat-bot: #374151;            /* Bot message bubble (consider a slightly lighter or different hue than sidebar if they are close) */
+                                     /* Example: --bg-chat-bot: #4A5568; */
+  
+  --bg-hover-light: rgba(255, 255, 255, 0.05); /* Subtle hover for dark elements */
+  --bg-hover-medium: rgba(255, 255, 255, 0.1); /* Stronger hover */
+  --bg-active: var(--primary-brand-accent);   /* Background for active/selected items */
+
+  /* Borders & Dividers */
+  --border-color-light: rgba(255, 255, 255, 0.08); /* Subtle borders */
+  --border-color-medium: rgba(255, 255, 255, 0.15); /* More visible borders */
+
+  /* Links (used in bot messages) */
+  --primary-brand-link: var(--primary-brand-accent); /* Default link color */
+  --primary-brand-link-hover: #20aee1; /* Lighter accent for link hover */
+
+
+  /* Sizing & Spacing */
+  --sidebar-width: 280px;
+  --top-bar-height: 60px;
+
+  /* Transitions */
+  --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.18);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.18);
+
+  /* Font sizes */
+  --fs-xs: 0.75rem;   /* 12px */
+  --fs-sm: 0.875rem;  /* 14px */
+  --fs-base: 1rem;    /* 16px */
+  --fs-md: 1.125rem;  /* 18px */
+  --fs-lg: 1.25rem;   /* 20px */
+  --fs-xl: 1.5rem;    /* 24px */
+  --primary-brand-accent-rgb: 22, 144, 191; /* RGB values for --primary-brand-accent */
+  --primary-brand-medium-rgb: 43, 44, 93;  /* RGB values for --primary-brand-medium */
+  --bot-heading-color: var(--text-light);    /* Or specific color */
+  --bot-code-bg: #0D1117;                  /* Dark bg for code blocks */
+  --bot-code-text: #C9D1D9;               /* Light text for code blocks */
+  --bot-inline-code-bg: rgba(var(--primary-brand-accent-rgb), 0.1);
+  --bot-inline-code-text: var(--text-medium);
+  --bot-quote-border: var(--primary-brand-accent);
+  --bot-quote-bg: rgba(var(--primary-brand-medium-rgb), 0.2);
+  --shadow-inner: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px inset; /* Example for pre background */
+
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  background-color: var(--bg-main);
+  color: var(--text-light);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* Prevents scrollbars on the body itself if app content is managed */
+}
+
+ul, ol {
+  list-style: none; /* Reset default list styles; specific list styles in ChatInterface.css */
+}
+
+a {
+  color: var(--primary-brand-link); /* Global link color */
+  text-decoration: none; /* Remove underline by default, add on hover if desired */
+}
+a:hover {
+  color: var(--primary-brand-link-hover);
+  text-decoration: underline; /* Add underline on hover for clarity */
+}
+
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  padding: 0; /* Reset default button padding */
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Global Scrollbar styles (optional, if you want all scrollbars styled) */
+/* If you only want to hide the chat area scrollbar, remove these global rules */
+/* and rely on the specific rules in ChatInterface.css */
+::-webkit-scrollbar {
+  width: 8px;  /* Slightly wider for better grab-ability if shown */
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1); /* Darker track for dark theme */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-brand-accent);
+  border-radius: 10px;
+  border: 2px solid transparent; /* Creates a small padding around the thumb */
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-brand-accent-darker);
+}
+/* For Firefox, if you want styled scrollbars globally (less control than WebKit) */
+/*
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-brand-accent) rgba(0,0,0,0.1);
+}
+*/
+
+
+/* Basic styles for the full-page loading spinner if used directly in index.html or similar early stage */
+.app-loading-spinner {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  height: 100%; width: 100%; font-size: var(--fs-base); color: var(--text-medium);
+}
+.app-loading-spinner svg {
+   animation: spin 1.2s linear infinite; /* Ensure 'spin' animation is defined below */
+   margin-bottom: 12px;
+}
+
+/* Keyframes for spinning animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes bounce { /* For loading dots in chat bubbles */
+  0%, 80%, 100% { transform: scale(0); opacity: 0.5; }
+  40% { transform: scale(1.0); opacity: 1; }
+}

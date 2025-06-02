@@ -1,0 +1,497 @@
+/* frontend/src/ChatInterface.css */
+
+/* --- Styles for the top-level wrapper of the entire chat module/interface --- */
+.chat-module-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--bg-main);
+}
+
+.chat-module-loading {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--fs-md);
+    color: var(--text-light);
+}
+.chat-module-loading svg {
+    animation: spin 1.2s linear infinite; /* Ensure @keyframes spin is in index.css */
+    margin-bottom: 16px;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--bg-sidebar);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal);
+  position: fixed;
+  left: 0; top: 0; bottom: 0;
+  z-index: 1000;
+  border-right: 1px solid var(--border-color-light);
+  transform: translateX(0);
+  box-shadow: var(--shadow-lg);
+}
+.sidebar.closed {
+  transform: translateX(calc(-1 * var(--sidebar-width)));
+}
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px 0 8px;
+  height: var(--top-bar-height);
+  border-bottom: 1px solid var(--border-color-light);
+  flex-shrink: 0;
+}
+.sidebar-action-button {
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-lg);
+  color: var(--text-dark);
+  transition: var(--transition-fast);
+}
+.sidebar-action-button:hover {
+  background-color: var(--bg-hover-medium);
+  color: var(--text-light);
+}
+.sidebar-header .new-chat-icon-button {
+  font-size: var(--fs-xl);
+}
+.sidebar-content {
+  flex-grow: 1;
+  padding: 12px 0;
+  overflow-y: auto;
+}
+.history-title {
+  padding: 8px 16px 4px;
+  font-size: var(--fs-xs); color: var(--text-dark);
+  text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;
+}
+.history-item {
+  display: flex; align-items: center; padding: 9px 16px;
+  cursor: pointer; font-size: var(--fs-sm); color: var(--text-medium);
+  margin: 2px 8px; border-radius: 6px;
+  white-space: nowrap; overflow: hidden;
+  text-overflow: ellipsis; transition: var(--transition-fast);
+}
+.history-item svg { margin-right: 10px; flex-shrink: 0; font-size: var(--fs-base); }
+.history-item:hover { background-color: var(--bg-hover-medium); color: var(--text-light); }
+.history-item.active { background-color: var(--bg-active); color: var(--text-light); font-weight: 500; }
+.history-item.active:hover { background-color: #137ca9; }
+.sidebar-footer {
+  padding: 12px 16px; border-top: 1px solid var(--border-color-light);
+  flex-shrink: 0; display: flex; align-items: center; justify-content: flex-end; gap: 8px;
+}
+.language-control, .settings-button, .footer-icon-button {
+  position: relative; padding: 10px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: var(--fs-lg); color: var(--text-dark); transition: var(--transition-fast);
+}
+.language-control:hover, .settings-button:hover, .footer-icon-button:hover {
+  background-color: var(--bg-hover-medium); color: var(--text-light);
+}
+.language-dropdown {
+  position: absolute; bottom: calc(100% + 8px); right: 0;
+  background-color: #3E456B;
+  border: 1px solid var(--border-color-medium);
+  border-radius: 8px; padding: 8px; z-index: 1010;
+  min-width: 120px; box-shadow: var(--shadow-md);
+}
+.language-dropdown button {
+  display: block; width: 100%; padding: 8px 12px; text-align: left;
+  font-size: var(--fs-sm); border-radius: 4px; color: var(--text-medium);
+}
+.language-dropdown button:hover { background-color: var(--bg-hover-medium); color: var(--text-light); }
+.language-dropdown button.active { background-color: var(--bg-active); color: var(--text-light); font-weight: 500;}
+
+
+/* --- Main Content --- */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 0;
+  transition: margin-left var(--transition-normal), width var(--transition-normal);
+  position: relative;
+}
+.main-content.sidebar-open {
+  margin-left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
+}
+.chat-interaction-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px; /* Adjust as needed for your preferred content width */
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.main-content.input-centered .chat-interaction-area {
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5vh;
+}
+.main-content.input-centered .chat-area.welcome-message {
+  flex-grow: 0;
+  text-align: center;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.welcome-message h2 {
+  font-size: var(--fs-xl); font-weight: 600; color: var(--text-light); margin-bottom: 10px;
+}
+.welcome-message p {
+  font-size: var(--fs-base); color: var(--text-medium); max-width: 480px; margin: 0 auto; line-height: 1.6;
+}
+.main-content.input-bottom .chat-interaction-area {
+  justify-content: flex-end;
+}
+.main-content.input-bottom .chat-area {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-top: 24px;
+  padding-bottom: 24px; /* More space at the bottom of messages */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.main-content.input-bottom .chat-area::-webkit-scrollbar {display: none;}
+
+
+/* --- Top Bar --- */
+.top-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  height: var(--top-bar-height); padding: 0 16px;
+  background-color: var(--bg-main);
+  flex-shrink: 0; position: relative;
+  border-bottom: 1px solid var(--border-color-light);
+}
+.hamburger-button {
+  padding: 10px; border-radius: 50%; display: flex;
+  font-size: var(--fs-xl); color: var(--text-dark);
+  transition: var(--transition-fast); z-index: 5;
+}
+.hamburger-button:hover { background-color: var(--bg-hover-light); color: var(--text-light); }
+.top-bar-logo-centered {
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%); display: flex; align-items: center;
+}
+.top-bar-logo-centered img { height: 30px; max-width: 150px; object-fit: contain; }
+.mode-switcher-container.top-bar-right-item {
+  display: flex; background-color: var(--primary-brand-medium);
+  border-radius: 8px; padding: 4px; box-shadow: var(--shadow-sm);
+  margin-left: auto; z-index: 4;
+}
+.mode-switcher-container button {
+  padding: 6px 12px; font-size: 0.8rem; font-weight: 500;
+  color: var(--text-medium); border-radius: 6px;
+  transition: var(--transition-fast); white-space: nowrap;
+}
+.mode-switcher-container button:hover:not(.active) { color: var(--text-light); }
+.mode-switcher-container button.active {
+  background-color: var(--bg-active); color: var(--text-light); box-shadow: var(--shadow-sm);
+}
+
+/* --- Chat Area & Messages --- */
+.chat-area {
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* Vertical space between distinct user/bot message blocks */
+}
+.message-wrapper { display: flex; width: 100%; }
+.message-wrapper.user { justify-content: flex-end; }
+.message-wrapper.bot {
+  justify-content: flex-start;
+}
+.message-wrapper.system { justify-content: center; }
+
+/* User Message Bubble Style (Kept as a bubble) */
+.message-wrapper.user .message {
+  max-width: 75%;
+  padding: 12px 18px;
+  border-radius: 20px;
+  border-bottom-right-radius: 6px;
+  line-height: 1.6;
+  font-size: var(--fs-sm);
+  word-wrap: break-word;
+  box-shadow: var(--shadow-md);
+  background-color: var(--bg-chat-user);
+  color: var(--text-light);
+}
+
+/* Bot Message Styling (ChatGPT-like: no bubble, flowing text, structured by typography) */
+.message-wrapper.bot .message {
+  background-color: transparent;
+  color: var(--text-light);
+  padding: 4px 0;
+  border-radius: 0;
+  box-shadow: none;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--fs-base);
+  line-height: 1.7;
+}
+
+.message-wrapper.bot .message > *:first-child {
+  margin-top: 0;
+}
+.message-wrapper.bot .message > *:last-child {
+  margin-bottom: 0;
+}
+
+/* == Paragraphs Styling for Bot == */
+.message-wrapper.bot .message p {
+  margin-bottom: 1em;
+}
+
+/* == Headings/Titles Styling for Bot (from Markdown H1-H4) == */
+.message-wrapper.bot .message h1,
+.message-wrapper.bot .message h2,
+.message-wrapper.bot .message h3,
+.message-wrapper.bot .message h4,
+.message-wrapper.bot .message h5,
+.message-wrapper.bot .message h6 {
+  color: var(--text-light); /* Or a specific var(--bot-heading-color) */
+  font-family: var(--font-family-sans);
+  line-height: 1.4;
+  margin-top: 1.75em;
+  margin-bottom: 0.75em;
+  font-weight: 600;
+}
+.message-wrapper.bot .message h1 {
+  font-size: var(--fs-3xl, 1.875em);
+  border-bottom: 1px solid var(--border-color-medium);
+  padding-bottom: 0.4em;
+}
+.message-wrapper.bot .message h2 {
+  font-size: var(--fs-2xl, 1.5em);
+  border-bottom: 1px solid var(--border-color-light);
+  padding-bottom: 0.3em;
+}
+.message-wrapper.bot .message h3 {
+  font-size: var(--fs-xl, 1.25em);
+  font-weight: 500;
+}
+.message-wrapper.bot .message h4 {
+  font-size: var(--fs-lg, 1.125em);
+  font-weight: 500;
+  color: var(--text-medium);
+}
+
+/* Heuristic for LLM subheadings like "**Main Components:**" */
+.message-wrapper.bot .message p > strong:only-child,
+.message-wrapper.bot .message p > b:only-child {
+    display: block;
+    font-size: var(--fs-lg, 1.125em);
+    font-weight: 600;
+    color: var(--text-light-emphasis, var(--text-light));
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
+    line-height: 1.4;
+}
+
+/* == List Styling for Bot == */
+.message-wrapper.bot .message ul,
+.message-wrapper.bot .message ol {
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 0.5em;
+  margin-bottom: 1.25em;
+  list-style-type: none;
+}
+.message-wrapper.bot .message li {
+  margin-bottom: 0.5em; /* Consistent spacing like example */
+  padding-left: 2em; /* Consistent indentation like example (1.5em for marker, 0.5em for space) */
+  position: relative;
+  line-height: 1.7;
+}
+.message-wrapper.bot .message ul > li::before {
+  content: "•";
+  color: var(--primary-brand-accent);
+  font-weight: bold;
+  font-size: 1.1em;
+  position: absolute;
+  left: 0.5em;
+  top: 0.05em; /* Small adjustment for vertical alignment */
+}
+.message-wrapper.bot .message ol {
+  counter-reset: ordered-list-counter;
+}
+.message-wrapper.bot .message ol > li::before {
+  counter-increment: ordered-list-counter;
+  content: counter(ordered-list-counter) ".";
+  color: var(--primary-brand-accent);
+  font-weight: 600;
+  font-size: 0.95em;
+  position: absolute;
+  left: 0; /* Aligns numbers flush left within the padding space of li */
+  top: 0.05em;
+  width: 1.5em; /* Ensures space for numbers like "1." or "10." */
+  text-align: right; /* Aligns the number to the right within its allocated width */
+}
+
+/* == Code Styling for Bot == */
+.message-wrapper.bot .message code { /* Inline code */
+  background-color: var(--bot-inline-code-bg, rgba(var(--primary-brand-accent-rgb, 22, 144, 191), 0.1));
+  padding: 0.2em 0.4em; /* Matches ChatGPT inline code padding */
+  border-radius: 4px;
+  font-size: 0.9em; /* Typically slightly smaller */
+  font-family: var(--font-family-mono);
+  color: var(--bot-inline-code-text, var(--text-medium));
+  border: 1px solid var(--border-color-light);
+}
+.message-wrapper.bot .message pre { /* Code blocks */
+  background-color: var(--bot-code-bg, #0D1117); /* Dark theme code block */
+  border: 1px solid var(--border-color-medium);
+  padding: 1em 1.2em; /* Generous padding */
+  border-radius: 6px; /* Standard small radius */
+  overflow-x: auto;
+  margin-top: 1em;    /* Good spacing before code block */
+  margin-bottom: 1.25em; /* Good spacing after code block */
+  font-size: 0.9em;
+  line-height: 1.6;   /* Spacing within code block lines */
+  /* No shadow for minimalist look */
+}
+.message-wrapper.bot .message pre code { /* Code tag inside pre */
+  background-color: transparent; /* No extra background */
+  padding: 0;
+  border: none;
+  color: var(--bot-code-text, #C9D1D9); /* Text color for code block content */
+  font-size: 1em; /* Inherits from pre, can be adjusted if needed */
+}
+
+/* == Blockquote Styling for Bot == */
+.message-wrapper.bot .message blockquote {
+  border-left: 3px solid var(--bot-quote-border, var(--primary-brand-accent));
+  padding: 0.75em 1.5em;
+  margin: 1.25em 0; /* Clear separation */
+  color: var(--text-medium); /* Slightly dimmer text for quotes */
+  background-color: var(--bot-quote-bg, rgba(var(--primary-brand-medium-rgb, 43, 44, 93), 0.15)); /* Very subtle bg tint */
+  border-radius: 0 4px 4px 0;
+  font-style: italic;
+}
+.message-wrapper.bot .message blockquote p { /* Paragraphs inside blockquote */
+    margin-bottom: 0.5em; /* Tighter spacing for lines within a quote */
+}
+.message-wrapper.bot .message blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* == Link Styling (global a style from index.css should mostly cover this) == */
+.message-wrapper.bot .message a {
+  /* color: var(--bot-link-color, var(--primary-brand-link)); /* Inherits global */
+  font-weight: 500;
+  /* text-decoration: none; /* Inherits global */
+}
+.message-wrapper.bot .message a:hover {
+  /* color: var(--bot-link-hover-color, var(--primary-brand-link-hover)); /* Inherits global */
+  /* text-decoration: underline; /* Inherits global */
+}
+
+/* == Emphasis (bold/italic) Styling for Bot == */
+.message-wrapper.bot .message strong,
+.message-wrapper.bot .message b {
+    /* font-weight: 600; (Default for strong/b) */
+    /* color: var(--text-light-emphasis, var(--text-light)); Already handled by global .message text or specific heading styles */
+}
+.message-wrapper.bot .message em,
+.message-wrapper.bot .message i {
+    /* font-style: italic; (Default for em/i) */
+    /* color: var(--text-light-emphasis, var(--text-light)); */
+}
+
+
+.message-wrapper.system .message {
+  background-color: transparent; color: var(--text-dark);
+  font-style: italic; font-size: var(--fs-xs); text-align: center; box-shadow: none; padding: 4px 0;
+}
+
+.loading-indicator {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 8px;
+}
+.loading-indicator-dots {
+  color: var(--text-medium);
+  padding: 8px 0; /* Remove background, align with text flow */
+  display: flex;
+  align-items: center;
+}
+.loading-indicator-dots span {
+  display: inline-block; width: 8px; height: 8px; margin: 0 3px;
+  background-color: var(--primary-brand-accent); border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+.loading-indicator-dots span:nth-child(1) { animation-delay: -0.32s; }
+.loading-indicator-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+
+/* --- Input Bar (Consistent Styling - Kept As Is) --- */
+.input-bar-container {
+  width: 100%;
+  padding: 12px 0 16px 0;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+/* .main-content.input-bottom .input-bar-container {
+  border-top: 1px solid var(--border-color-light);
+  background-color: var(--bg-input-bottom);
+} */
+.input-bar-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-input-initial);
+  border-radius: 12px;
+  padding: 8px;
+  border: 1px solid var(--border-color-medium);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  min-height: 56px;
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 700px;
+}
+.input-bar-wrapper:focus-within {
+  border-color: var(--primary-brand-accent);
+  box-shadow: 0 0 0 3px rgba(var(--primary-brand-accent-rgb, 22, 144, 191), 0.25), var(--shadow-md);
+}
+.input-bar-button {
+  color: var(--text-dark); font-size: var(--fs-lg); padding: 10px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  transition: var(--transition-fast); margin: 0 2px;
+}
+.input-bar-button:hover:not(:disabled) { color: var(--text-light); background-color: var(--bg-hover-medium); }
+.input-bar-button:disabled { opacity: 0.4; cursor: not-allowed; }
+.input-bar-wrapper input[type="text"] {
+  flex-grow: 1; background-color: transparent; border: none;
+  color: var(--text-light); padding: 10px 12px; font-size: var(--fs-base); outline: none;
+  min-width: 0;
+}
+.input-bar-wrapper input[type="text"]::placeholder { color: var(--text-dark); opacity: 0.8;}
+.send-button.input-bar-button {
+  background-color: var(--primary-brand-accent); color: var(--text-light);
+  margin-left: 6px;
+  font-size: var(--fs-lg); width: 40px; height: 40px; padding: 0;
+  transition: var(--transition-fast);
+}
+.send-button.input-bar-button:hover:not(:disabled) {
+    background-color: var(--primary-brand-accent-darker);
+}
+.send-button.input-bar-button:disabled {
+    background-color: var(--primary-brand-medium);
+    color: var(--text-dark); opacity: 0.7;
+}
