@@ -1,0 +1,595 @@
+[
+    {
+      "tv_model": "P150-2851AV9.7",
+      "overview": "P150-2851AV9.7 is a comprehensive power conversion, backlight driven and\nsignal processing mainboard to support UHD LCD panel.During maintenance,pls\npay attentiond to do electrostatic protection to prevent the process of\nmaintenance caused by the driver plate causing secondary damage, especially for\nthe chips, MOS, crystal vibration and other sensitive devices directly connected to\nthe circuit .For chip of patch type, it is recommended to use hot air gun when\nrepairing and replacing, and the temperature should be set at about 340\ndegrees.When using the soldering iron, make sure whether the soldering iron has\nelectric leakage or not. The temperature should be set at about 340-360, and the\nwelding time should not be too long",
+      "key_components": [
+        {
+          "component_id": "U1",
+          "description": "TMI3253 12V to 5V_Standby"
+        },
+        {
+          "component_id": "U2",
+          "description": "FR9855SP 12V to 1.0v-CPU"
+        },
+        {
+          "component_id": "U4",
+          "description": "TMI3411 5V to 3.3V_Standby"
+        },
+        {
+          "component_id": "U7 LDO",
+          "description": "WR0512-18A50R 3.3V-1.8V Normal"
+        },
+        {
+          "component_id": "U8",
+          "description": "RTD2851A Main IC"
+        },
+        {
+          "component_id": "U12 TMI6050 LDO",
+          "description": "ADJ(0.8-5V) 3.3V to 1.5V PIF"
+        },
+        {
+          "component_id": "U23",
+          "description": "KLMAG1JETD-B041 EMMC5.1 flash 16GB"
+        },
+        {
+          "component_id": "PT2",
+          "description": "12V Transformer EQ26P130-180TB"
+        },
+        {
+          "component_id": "PT3 LED Transformer",
+          "description": "P130-T1A 65KHZ"
+        },
+        {
+          "component_id": "PU4 PFC IC",
+          "description": "OB6566MP"
+        },
+        {
+          "component_id": "PU1 Primary IC",
+          "description": "LD5537B1GL"
+        },
+        {
+          "component_id": "PU5 LED Primary IC",
+          "description": "LD5535E1 GL"
+        },
+        {
+          "component_id": "SU1 LED IC",
+          "description": "AS358MTR-E1"
+        }
+      ],
+      "image_filename": "P150-2851AV9.7_key_comp.png"
+    },
+    {
+      "tv_model": "RTD2851AV9.2",
+      "overview": "This product is based on RTD2851A chip, a Google TV driver board developed\nfor the global market. Support 4K LCD screen. Electrostatic protection should be\ndone during maintenance, especially for the circuit directly connected to some\nsensitive devices such as chips, MOS and crystal oscillator, so as to prevent\nsecondary damage to the driver board during maintenance. You are advised to use a\nheat gun and set the temperature to about 340 degrees during maintenance and\nreplacement of chip patches. When using the soldering iron, confirm whether the\nsoldering iron leakage, welding time should not be too long",
+      "key_components": [
+        {
+          "component_id": "U1",
+          "description": "TMI3253 12V to 5V_Standby"
+        },
+        {
+          "component_id": "U21",
+          "description": "RTL8822CU-VB WIFI"
+        },
+        {
+          "component_id": "U5",
+          "description": "TMI3253 12V to 1.0v-SCPU"
+        },
+        {
+          "component_id": "U6 TMI6050 LDO",
+          "description": "ST_1V0"
+        },
+        {
+          "component_id": "U10",
+          "description": "RTD2851A Main IC"
+        },
+        {
+          "component_id": "U27 WA15-6819B I2S power amplifier IC",
+          "description": ""
+        },
+        {
+          "component_id": "U23",
+          "description": "KLMAG1JETD-B041 EMMC5.1 flash 16GB EMMC"
+        },
+        {
+          "component_id": "UT1",
+          "description": "RT710 DVB-S/S2"
+        },
+        {
+          "component_id": "UT3",
+          "description": "Si2151 A/DTV"
+        },
+        {
+          "component_id": "U2",
+          "description": "FR9855SP core_1v DC TO DC"
+        }
+      ],
+      "image_filename": "RTD2851AV9.2_key_comp.png"
+    },
+    {
+      "tv_model": "P75-2841AV9.7",
+      "overview": "P75-2841AV9.2 is a full HD\nLCD driver board that integrates power conversion, backlight drive and signal processing.\nThe driver board is equipped with a high voltage conversion circuit. During maintenance,\npay attention to confirm whether the large electrolysis on the board has been discharged\nto avoid electric shock. Especially for some chip, MOS, crystal oscillator and other\nsensitive devices directly connected circuit, to prevent the process of maintenance caused\nby the driver board secondary damage. You are advised to use a heat gun and set the\ntemperature to about 340 degrees during maintenance and replacement of chip patches.\nWhen using the soldering iron, confirm whether the iron leakage, each solder joint\nwelding time should not be too long",
+      "key_components": [
+        {
+          "component_id": "U1",
+          "description": "TMI3253 12V to 5V_Standby"
+        },
+        {
+          "component_id": "U2",
+          "description": "FR9855SP 12V to 1.0v-CORE"
+        },
+        {
+          "component_id": "U3",
+          "description": "TMI3411 5V to 3.3V_Standby"
+        },
+        {
+          "component_id": "U4",
+          "description": "TMI3411 5V to 1.5V_DDR"
+        },
+        {
+          "component_id": "U5",
+          "description": "TMI3253 12V to 1.0v-CPU"
+        },
+        {
+          "component_id": "U6",
+          "description": "TMI6050 3.3V to ST1.0V"
+        },
+        {
+          "component_id": "U7 LDO",
+          "description": "WR0512-18A50R 3.3V to 1.8V"
+        },
+        {
+          "component_id": "U9 TMI6050 LDO",
+          "description": "ADJ(0.8-5V) 3.3V to 1.5V PIF"
+        },
+        {
+          "component_id": "U8",
+          "description": "RTD2841A"
+        },
+        {
+          "component_id": "U12",
+          "description": "TMI6050 3.3V to PIF1.5V"
+        },
+        {
+          "component_id": "U23 EMMC",
+          "description": "KLM8G1GETF-B041EMMC5.0 flash 8GB"
+        },
+        {
+          "component_id": "U27 WA15-6819B I2S Amplifier IC",
+          "description": ""
+        },
+        {
+          "component_id": "PF1",
+          "description": "3.15A(Fuse)"
+        },
+        {
+          "component_id": "PD1/PD2/PD6",
+          "description": "MB35K(Rectifier bridge)"
+        },
+        {
+          "component_id": "PQ1",
+          "description": "WMM15N65C4(Primary MOS)"
+        },
+        {
+          "component_id": "PU2",
+          "description": "OB2271(Primary PWM IC)"
+        },
+        {
+          "component_id": "PT1",
+          "description": "EQ30P075-012110TA(Transformer)"
+        },
+        {
+          "component_id": "SD2",
+          "description": "MBRA10100BCT(12V Rectifier diode)"
+        },
+        {
+          "component_id": "SD6",
+          "description": "SF58G(LED-VCC Rectifier diode)"
+        },
+        {
+          "component_id": "SU2",
+          "description": "OB3375(Backlight IC)"
+        },
+        {
+          "component_id": "SQ1",
+          "description": "CS630(Backlight MOS)"
+        }
+      ],
+      "image_filename": "P75-2841AV9.7_key_comp.png"
+    },
+    {
+      "tv_model": "EL.RT2864-FG48",
+      "overview": "EL.RT2864-FG48 is a full HD LCD driver board that integrates power conversion,\nbacklight driving and signal processing. It needs to be protected from static\nelectricity during maintenance, especially for circuits that are directly connected to\nsensitive devices such as chips, MOS, and crystal oscillators. Prevent secondary\ndamage to the drive board during maintenance. For chip type chips, it is\nrecommended to use a hot air gun when repairing and replacing, and the\ntemperature should be set at about 340 degrees. When using a soldering iron,\nconfirm whether the soldering iron is leaking, the temperature is set at about 340-\n360, and the soldering time should not be too long.",
+      "key_components": [
+        {
+          "component_id": "U3",
+          "description": "TMI3253 18V 3A 12V-> 5V"
+        },
+        {
+          "component_id": "U4",
+          "description": "TMI3411 6V 1.2A 1.5MHZ 3.3V->1.2V"
+        },
+        {
+          "component_id": "UT1",
+          "description": "SI2151-A10-GMR"
+        },
+        {
+          "component_id": "UT2",
+          "description": "RDA5815,TUNER chip,Support DVB-S/S2,QFN20"
+        },
+        {
+          "component_id": "U20/EMMC",
+          "description": "KLM8G1GETF-B041 EMMC5.1 flash 8GB"
+        },
+        {
+          "component_id": "U5",
+          "description": "TMI3244T 4.5-18V 3A 12V-> SCPU_VOLTAGE"
+        },
+        {
+          "component_id": "U13 RT9026GFP MSOP-10 DDR linear bus terminal regulator",
+          "description": ""
+        },
+        {
+          "component_id": "U2",
+          "description": "JW5066 4.5-18V DC TO DC 12V-> CORE_VOLTAGE"
+        },
+        {
+          "component_id": "U22",
+          "description": "TMI3253 18V 3A 12V-> 3.3V"
+        },
+        {
+          "component_id": "U6",
+          "description": "TMI3408C 6V 1.5A 5V-> 1.8V"
+        },
+        {
+          "component_id": "U27 WA15-6819B I2S \u529f\u653e PVCC",
+          "description": "5-28V Maximum Gain is +48.375dB QFN40"
+        },
+        {
+          "component_id": "U29",
+          "description": "TMI3408C 6V 1.5A 3.3V-> 0.95V"
+        },
+        {
+          "component_id": "UD1",
+          "description": "K4A8G165WC-BCTD DDR4 512*16M/1GB 2666Mbps, SAMSUNG"
+        },
+        {
+          "component_id": "UD2",
+          "description": "SAMSUNG DDR4 K4A4G165WF-BCTD BGA96 512MB"
+        },
+        {
+          "component_id": "U12/MAIN CHIP",
+          "description": "RTD2864FLV-GR ATV(PAL+NTSC+SECAM)+DTV(DTMB+ATSC+ISDB+DVBC/\nT/T2/S/S2/S2X) WITH DDR WITHOUT DD"
+        },
+        {
+          "component_id": "PF1 DIP square plastic case fuse",
+          "description": "2010 series T3.15AL 250Vac red ribbon\nWALTER/Ward"
+        },
+        {
+          "component_id": "PQ2 SMT N-channel MOSFET",
+          "description": "MMD65R600QRH 7.3A/650V Vgs=\u00b1 30V Ciss=540PF\nQg=13.8nC 0.6 \u03a9 @ 10V/2.1A TO-252 Brand: magnachip/Megner"
+        },
+        {
+          "component_id": "PT1 DIP high-frequency transformer",
+          "description": "EQ26 P55-1219-T1"
+        },
+        {
+          "component_id": "SL1 DIP I-shaped inductor",
+          "description": "70UH, saturation current 3A 12 * 12/with protrusion\nP=7.5mm 0.15 * 12P * 38.5Ts, column diameter 6mm, vertical short leg"
+        },
+        {
+          "component_id": "SQ1 SMT N-channel MOSFET",
+          "description": "WMO15N10TI 14.6A/100V Vgs=\u00b1 20V Ciss=1100PF\nQg=12nC 0.1 \u03a9 @ 10V/5A TO-252 Brand: WAYON/VIAN"
+        },
+        {
+          "component_id": "SD1 SMT Schottky diode",
+          "description": "MBR10100GCT 10A/100V Vf< 0.85V@5A TO-252 Brand:\nPY/Pingwei"
+        },
+        {
+          "component_id": "SU2 LED boost driver chip",
+          "description": "OB3353ACPA 120KHZ with built-in DC dimming\nVref=0.4V \u00b1 2% Vovp=2.0V Vocp=0.38V SOP8 Brand: On Right/Anbao"
+        },
+        {
+          "component_id": "PD1 SMT Rectifier bridge",
+          "description": "YBS3010A 3A/1000V VF\uff1c1.0V@1.5A Ifsm\uff1e120A YBS\nYJ/YANGJIE"
+        },
+        {
+          "component_id": "PU2 Flyback power management chip",
+          "description": "OB2273CMP 65KHZ 3-pin non functional\nVcs_ Max=0.72V SOT23-6 Brand: On Right/Anbao"
+        }
+      ],
+      "image_filename": "EL.RT2864-FG48_key_comp.png"
+    },
+    {
+      "tv_model": "P150-2874WV8.0",
+      "overview": "P150-2874WV8.0 is a ultra-HD LCD driver board that integrates power conversion,\nbacklight driving and signal processing. It needs to be protected from static\nelectricity during maintenance, especially for some chips, MOS, crystal oscillators and\nother sensitive devices directly connected. circuit to prevent secondary damage to\nthe driver board during maintenance. For chip type chips, it is recommended to use a\nhot air gun when repairing and replacing, and the temperature should be set at\nabout 340 degrees. When using a soldering iron, confirm whether the soldering iron\nis leaking, the temperature is set at about 340-360, and the soldering time should\nnot be too long.",
+      "key_components": [
+        {
+          "component_id": "U1",
+          "description": "TMI3252 4.5V-18V 600KHZ 2A SOT23-6"
+        },
+        {
+          "component_id": "U2",
+          "description": "TMI3253 18V 3A SOT23-6"
+        },
+        {
+          "component_id": "U8 LDO",
+          "description": "WR0512-18A50R 1.8V 500mA SOT23-5"
+        },
+        {
+          "component_id": "U23",
+          "description": ""
+        },
+        {
+          "component_id": "U17",
+          "description": "KLM8G1GETF-B041 EMMC5.1 flash 8GB"
+        },
+        {
+          "component_id": "U7 TMI6050 LDO",
+          "description": "ADJ(0.8-5V) Vin-Vout\u22641.8V@Ta=25\u2103 600mA SOT23_5"
+        },
+        {
+          "component_id": "U6",
+          "description": "TMI3411 2.3V~6V 1.6A 1.0Mhz"
+        },
+        {
+          "component_id": "U24 RTD2874WDA-GR ATV(PAL+NTSC+SECAM)+DTV(DTMB+ATSC+ISDB+DVBC/ T/T2/S/S2/S2X)",
+          "description": "1.5GDDR + DD"
+        },
+        {
+          "component_id": "U16",
+          "description": "NCE4435"
+        },
+        {
+          "component_id": "U26 JW5079A DC-DC",
+          "description": "VIN: 4V~23V Imax\uff1a10A frequency\uff1a500kHz VREF:0.6V"
+        },
+        {
+          "component_id": "U5",
+          "description": "TMI3244T 4.5-18V 3A SOT23-6 peak 4A"
+        },
+        {
+          "component_id": "U22 WA15-6819B I2S A m p l i f i e r PVCC",
+          "description": "5-28V Maximum Gain is +48.375dB QFN40"
+        },
+        {
+          "component_id": "U18",
+          "description": "E2PROM FT24C256A-ESR-T B R A N D \uff1aFMD"
+        },
+        {
+          "component_id": "U19 WT20-1809 LNB IC",
+          "description": "Output current range 250-880mA with I2C control"
+        },
+        {
+          "component_id": "SU1 DIP dual operational amplifier chip",
+          "description": "AS358MTR-E1 VCC: 3V~36V -40-85 SOIC-8 Brand: BCD"
+        },
+        {
+          "component_id": "SD11 SMT Schottky diode",
+          "description": "MBR10150GCT 10A/150V Vf< 0.88V@5A TO-252 Brand: PY/Pingwei"
+        },
+        {
+          "component_id": "PT2",
+          "description": ""
+        },
+        {
+          "component_id": "PT1",
+          "description": "DIP high-frequency transformer EQ26 P130-T1"
+        },
+        {
+          "component_id": "PU6/PU5",
+          "description": "SMT optocoupler EL817-B CTR:130%-260% SMD-4 BRAND:Everlight"
+        },
+        {
+          "component_id": "PQ7",
+          "description": ""
+        },
+        {
+          "component_id": "PU4",
+          "description": "DIP flyback power management chip LD5535E1 GL 65KHZ 3-\npin OTP function Vcs_ Max=0.82V SOT26 Brand: Leadtrend/\nTongjia"
+        },
+        {
+          "component_id": "SMT N - c h a n n e l MO S t u b e MMD 6 5 R 9 0 0 Q R H 4 . 7 A /",
+          "description": "6 5 0 V V g s = \u00b1 3 0 V C i s s = 3 9 5 P F Q g = 1 0 . 1 n C 0 . 9 \u03a9 @"
+        },
+        {
+          "component_id": "PQ4",
+          "description": ""
+        },
+        {
+          "component_id": "1",
+          "description": "0 V / 1 . 6 A T O - 2 5 2 B r a n d : m a g n a c h i p /Me g n e r"
+        },
+        {
+          "component_id": "PQ2 SMT N c h a n n e l MOS t u b e",
+          "description": "I PD7 0 R 3 6 0 P 7 S 1 2 . 5 A / 7 0 0 V\nV g s = \u00b1 3 0 V C i s s = 5 1 7 P F Qg = 1 6 . 4 n C 0 . 3 6 \u03a9 @ 1 0 V / 3 A TO-\n2 5 2 B r a n d : I n f i n e o n / I n f i n e o n"
+        },
+        {
+          "component_id": "PQ1",
+          "description": ""
+        },
+        {
+          "component_id": "PL2",
+          "description": "D I P P F C i n d u c t a n c e E Q 2 7 ( 4 + 4 P ) E Q 2 7 P 1 5 0 - 2 2 0 u\nL A"
+        }
+      ],
+      "image_filename": "P150-2874WV8.0_key_comp.png"
+    },
+    {
+      "tv_model": "EL.RT2874-FG95",
+      "overview": "EL.RT2874-FG95 is a ultra-HD LCD driver board that integrates power conversion, backlight driving and signal processing. It needs to be protected from static electricity during maintenance, especially for some chips, MOS, crystal oscillators and other sensitive devices directly connected. circuit to prevent secondary damage to the driver board during maintenance. For chip type chips, it is recommended to use a hot air gun when repairing and replacing, and the temperature should be set at about 340 degrees. When using a soldering iron, confirm whether the soldering iron is leaking, the temperature is set at about 340-360, and the soldering time should not be too long.",
+      "key_components": [
+        {
+          "component_id": "U2",
+          "description": "TMI3253 18V 3A SOT23-6"
+        },
+        {
+          "component_id": "U19 DT1805 LNB IC",
+          "description": "output current range 250-880mA with I2C control"
+        },
+        {
+          "component_id": "U1",
+          "description": "TMI3252 4.5V-18V 600KHZ 2A SOT23-6"
+        },
+        {
+          "component_id": "U8",
+          "description": "TMI6050-18 1.8V 0.6A SOT23-5"
+        },
+        {
+          "component_id": "U17",
+          "description": "KLM8G1GETF-B041 EMMC5.1 flash 8GB"
+        },
+        {
+          "component_id": "U7 TMI6050 LDO",
+          "description": "ADJ(0.8-5V) Vin-Vout\u22641.8V@Ta=25\u2103 600mA SOT23_5"
+        },
+        {
+          "component_id": "U23",
+          "description": "TMI6050-25 2.5~5.5V 0.6A SOT23-5"
+        },
+        {
+          "component_id": "U6",
+          "description": "TMI3411 2.3V~6V 1.6A 1.0Mhz"
+        },
+        {
+          "component_id": "U16 PMOS",
+          "description": "WM03P91A VDS=-30V ID=-9.1A 24m\u03a9@-10V SOP-8L"
+        },
+        {
+          "component_id": "U24 RTD2874WDA-GR ATV(PAL+NTSC+SECAM)+DTV(DTMB+ATSC+ISDB+DVB-C/T/T2/S/S2/S2X)",
+          "description": "biult in 1.5GDDR and DD"
+        },
+        {
+          "component_id": "U26 JW5079A DC-DC",
+          "description": "VIN: 4V~23V Imax\uff1a10A frequency\uff1a500kHz VREF:0.6V"
+        },
+        {
+          "component_id": "U5",
+          "description": "TMI3244T 4.5-18V 3A SOT23-6 peak 4A"
+        },
+        {
+          "component_id": "U22 WA15-6819B I2S speaker PVCC",
+          "description": "5-28V Maximum Gain is +48.375dB QFN40"
+        },
+        {
+          "component_id": "U25 WIFI module",
+          "description": "MT7663BUN (EL.MT7663BUN-WFT) IEEE Std. 802.11 a/b/g/n/ac 2.4G/5G Bluetooth V2.1/4.2/5.1"
+        },
+        {
+          "component_id": "PL2 DIP PFC inductor",
+          "description": "EQ27(4+4P) EQ27P130-250uLA"
+        },
+        {
+          "component_id": "PD4 SMT rectifier bridge",
+          "description": "YBSN10010 10A/1000V Vf< 1.0V@5A Ifms is 250A YBS6 YJ/Yangjie"
+        },
+        {
+          "component_id": "PU3 SMT PFC control chip",
+          "description": "OB6566MP TM mode SOT23-6 Brand: On Right/Anbao"
+        },
+        {
+          "component_id": "PT2 DIP high-frequency transformerEQ26/13(6+4P)",
+          "description": "EQ26P130-180TB 100KHZ"
+        },
+        {
+          "component_id": "PQ1 SMT N-channel MOSFET",
+          "description": "OSG70R360DTF 11A/700V Vgs=\u00b1 30V Ciss=587.3PF Qg=13.3nC 0.36 \u03a9 @ 10V/3A TO-252 Brand: Dongwei"
+        },
+        {
+          "component_id": "PQ2 SMT N-channel MOSFET",
+          "description": "MMD70R600QRH 7.3A/700V Vgs=\u00b1 30V Ciss=539PF Qg=15nC 0.6 \u03a9 @ 10V/2.1A TO-252 Brand: magnachip/Megner"
+        },
+        {
+          "component_id": "PU4 SMT flyback power management chip",
+          "description": "LD5535E1 GL 65KHZ 3-pin OTP function Vcs_ Max=0.82V SOT26 Brand: Leadtrend/Tongjia"
+        },
+        {
+          "component_id": "PU5,PU6",
+          "description": "SMT optocoupler EL817-B CTR:130%-260% SMD-4 brand:Everlight"
+        },
+        {
+          "component_id": "PQ7 DIP NPN transistor",
+          "description": "2N2222A Vceo=40V Vcbo=75V Vebo=6V Ic=600mA 0.625W TO-92 ribbon"
+        },
+        {
+          "component_id": "SU1 SMT dual operational amplifier chip",
+          "description": "AS358MTR-E1 VCC: 3V~36V -40-85 \u2103 SOIC-8 Brand: BCD"
+        },
+        {
+          "component_id": "PT1 DIP high-frequency transformer",
+          "description": "EQ26/12 (6+5P) P130-T1A 65KHZ without peripheral tape"
+        },
+        {
+          "component_id": "SD4 SMT Schottky diode",
+          "description": "MBRB10150CTS 10A/150V Vf< 0.9V@5A TO-263 YJ/Yang Jie"
+        }
+      ],
+      "image_filename": "EL.RT2874-FG95_key_comp.png"
+    },
+    {
+      "tv_model": "LT-2874WV6.2",
+      "overview": "LT-2874WV6.2 is a fully high-definition LCD driver board that integrates backlight driving and signal processing. It is necessary to take electrostatic protection during maintenance, especially for circuits directly connected to sensitive devices such as chips, MOS, and crystal oscillators, to prevent secondary damage to the driver board during maintenance. For chip mounting type, it is recommended to use a Heat gun for maintenance and replacement, and the temperature should be set at about 340 \u2103. When using soldering iron, confirm if there is any leakage, set the temperature at around 340-360, and do not weld for too long.",
+      "key_components": [
+        {
+          "component_id": "U1",
+          "description": "TMI3253 12V to 5V_Normal"
+        },
+        {
+          "component_id": "U2",
+          "description": "TMI3253 12V 3v3_S"
+        },
+        {
+          "component_id": "U3",
+          "description": "TMI3113 5V to3V3_S"
+        },
+        {
+          "component_id": "U4",
+          "description": "TMI3408 3V3_S TO ST1V0"
+        },
+        {
+          "component_id": "U5",
+          "description": "TMI3253 12V to 1.03V for CPU"
+        },
+        {
+          "component_id": "U6",
+          "description": "TMI3411 3V3_S to 1.5V_DDR"
+        },
+        {
+          "component_id": "U7",
+          "description": "LDO3983S 5V_Normal to 1.5V_DDR"
+        },
+        {
+          "component_id": "U17",
+          "description": "8G EMMC"
+        },
+        {
+          "component_id": "U9",
+          "description": "RTD2874SFA"
+        },
+        {
+          "component_id": "U18",
+          "description": "E2PROM 24C256"
+        },
+        {
+          "component_id": "U19 DT1805 LNB IC",
+          "description": ""
+        },
+        {
+          "component_id": "U22",
+          "description": "WA15-6819B"
+        },
+        {
+          "component_id": "UT1",
+          "description": "TUNER"
+        },
+        {
+          "component_id": "U24 WIFI module",
+          "description": ""
+        },
+        {
+          "component_id": "U26",
+          "description": "62600 12V to 1.03V for CORE"
+        }
+      ],
+      "image_filename": "LT-2874WV6.2_key_comp.png"
+    }
+  ]
